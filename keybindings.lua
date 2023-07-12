@@ -208,6 +208,12 @@ keybindings = {
     modes       = {"tool"},
     call        = clickZoomOut
   },
+  zoomFit = {
+    description = "Zoom fit",
+    buttons     = {"0"},
+    modes       = {"tool"},
+    call        = clickZoomFit
+  },
 
   -- Thickness
   veryFine = {

@@ -113,6 +113,9 @@ function clickZoomOut()
   app.uiAction({["action"] = "ACTION_ZOOM_OUT"})
 end
 
+function clickZoomFit()
+  app.uiAction({["action"] = "ACTION_ZOOM_FIT"})
+end
 
 -- page
 function clickCopyPage()
