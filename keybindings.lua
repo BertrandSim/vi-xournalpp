@@ -249,6 +249,12 @@ local keybindings = {
     modes = { 'tool' },
     call = api.zoomOut,
   },
+  zoomFit = {
+    description = "Zoom fit",
+    buttons     = {"0"},
+    modes       = {"tool"},
+    call        = clickZoomFit
+  },
 
   -- Thickness
   veryFine = {
