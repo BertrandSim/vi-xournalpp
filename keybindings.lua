@@ -59,7 +59,7 @@ local keybindings = {
     description = 'Selection',
     buttons = { 's' },
     modes = { 'tool' },
-    call = api.selectRegion,
+    call = api.selectRectangle,
   },
   tex = {
     description = 'Tex',
@@ -635,13 +635,13 @@ local keybindings = {
   -- Visual
   lasso = {
     description = 'Select Region',
-    buttons = { 's' },
+    buttons = { 'a' },
     modes = { 'visual' },
     call = api.selectRegion,
   },
   selectRectangle = {
     description = 'Select Rectangle',
-    buttons = { 'a', 'r' },
+    buttons = { 's', 'r' },
     modes = { 'visual' },
     call = api.selectRectangle,
   },
