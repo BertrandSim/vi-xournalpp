@@ -38,7 +38,7 @@ keybindings = {
     description = "Selection",
     buttons     = {"s"},
     modes       = {"tool"},
-    call        = clickSelectRegion
+    call        = clickSelectRectangle
   },
   tex = {
     description = "Tex",
@@ -562,13 +562,13 @@ keybindings = {
   -- Visual
   lasso = {
     description = "Select Region",
-    buttons     = {"s"},
+    buttons     = {"a"},
     modes       = {"visual"},
     call        = clickSelectRegion
   },
   selectRectangle = {
     description = "Select Rectangle",
-    buttons     = {"a", "r"},
+    buttons     = {"s", "r"},
     modes       = {"visual"},
     call        = clickSelectRectangle
   },
