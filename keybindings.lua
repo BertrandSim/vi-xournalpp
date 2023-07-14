@@ -653,10 +653,27 @@ local keybindings = {
   },
   selectObject = {
     description = 'Select Object',
-    buttons = { 'f', 'g' },
+    buttons = { 'f' },
     modes = { 'visual' },
     call = api.selectObject,
   },
+
+
+  -- Snapping
+  GridSnap = {
+   description = "Grid Snapping",
+   buttons     = {"g"},
+   modes       = {"visual", "shape"},
+   call        = clickGridSnap
+  },
+
+  RotationSnap = {
+   description = "Rotation Snapping",
+   buttons     = {"h"},
+   modes       = {"visual", "shape"},
+   call        = clickRotationSnap
+  },
+
 }
 
 -- helper functions
