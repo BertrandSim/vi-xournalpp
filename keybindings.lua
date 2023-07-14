@@ -499,7 +499,7 @@ local keybindings = {
   },
   newLayer = {
     description = 'NewLayer',
-    buttons = { 'y' },
+    buttons = { 'm' },
     modes = { 'page' },
     call = api.newLayer,
   },
@@ -595,7 +595,7 @@ local keybindings = {
   },
   layerUp = {
     description = 'Layer up',
-    buttons = { 'y' },
+    buttons = { 'z' },
     modes = { 'navigation' },
     call = api.layerUp,
   },
