@@ -1,1 +1,4 @@
 config.lua
+*.autosave.xopp
+*~
+/tags
