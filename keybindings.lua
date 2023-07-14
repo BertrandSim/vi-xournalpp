@@ -426,7 +426,7 @@ keybindings = {
   },
   newLayer = {
     description = "NewLayer",
-    buttons     = {"y"},
+    buttons     = {"m"},
     modes       = {"page"},
     call        = clickNewLayer
   },
@@ -522,7 +522,7 @@ keybindings = {
   },
   layerUp = {
     description = "Layer up",
-    buttons     = {"y"},
+    buttons     = {"z"},
     modes       = {"navigation"},
     call        = clickLayerUp
   },
