@@ -56,7 +56,7 @@ keybindings = {
   -- History
   undo = {
     description = "Undo",
-    buttons     = {"d", "u", "z"},
+    buttons     = {"u", "z"},
     modes       = {"tool"},
     call        = clickUndo,
   },
