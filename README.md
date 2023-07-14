@@ -52,7 +52,9 @@ The default mode is **tool** mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
 modes, and history operations. Available tools are _pen_, _eraser_,
 _selection_, _highlighter_, _hand_, _tex_, _text_, _delete_, _file_.
-Available modes are **color**, **shape**, **linestyle**, **page**, **navigation**.
+Available thicknesses are
+_very fine_, _fine_, _medium_, _thick_, _very thick_.
+Available modes are **color**, **shape**, **linestyle**, **page**, **navigation**, **visual**.
 Pressing any key in any mode other than _tool_ automatically
 returns the user to tool mode, unless the mode was made "sticky"
 by pressing `<Shift>`. E.g., to enter _sticky color mode_, press
@@ -102,6 +104,11 @@ Available thicknesses are
 _very fine_, _fine_, _medium_, _thick_, _very thick_,
 accessed by `a`, `s`, `d`, `f`, `g`, respectively.
 
+### Visual mode
+The **visual** mode is responsible for the selection of objects.
+Available actions are
+_lasso_, _selectRectangle_, _selectObject_.
+
 ## Configuration
 
 ### Keyboard Layout
@@ -133,7 +140,7 @@ One keybinding looks something like this:
 ```lua
 selection = {
   description = "Selection",
-  buttons     = {"s", "v"},
+  buttons     = {"s"},
   modes       = {"tool"},
   call        = clickSelectRegion
 }
