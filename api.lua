@@ -255,3 +255,23 @@ end
 function clickPlainBG()
   app.changeCurrentPageBackground("plain");
 end
+
+
+-- snapping
+function clickGridSnap(enabled)
+  -- it only toggles, ie. enabled = true / false is not used
+  app.uiAction({
+    ["action"] = "ACTION_GRID_SNAPPING", 
+    ["group"] = "GROUP_GRID_SNAPPING", 
+    ["enabled"] = enabled
+  })
+end
+
+function clickRotationSnap(enabled)
+  -- it only toggles, ie. enabled = true / false is not used
+  app.uiAction({
+    ["action"] = "ACTION_ROTATION_SNAPPING",
+    ["group"] = "GROUP_SNAPPING", 
+    ["enabled"] = enabled
+  })
+end
