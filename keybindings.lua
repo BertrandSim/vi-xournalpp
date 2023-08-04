@@ -383,37 +383,56 @@ local keybindings = {
     description = 'Ruler',
     buttons = { 's' },
     modes = { 'shape' },
-    call = api.ruler,
+    call = function() 
+      api.pen()
+      api.ruler() 
+    end
   },
   arrow = {
     description = 'Arrow',
     buttons = { 'a' },
     modes = { 'shape' },
-    call = api.arrow,
+    call = function() 
+      api.pen()
+      api.arrow() 
+    end
   },
   rectangle = {
     description = 'Rectangle',
     buttons = { 'r' },
     modes = { 'shape' },
-    call = api.rectangle,
+    call = function() 
+      api.pen()
+      api.rectangle() 
+    end
   },
   ellipse = {
     description = 'Ellipse',
     buttons = { 'e' },
     modes = { 'shape' },
-    call = api.ellipse,
+    call = function() 
+      api.pen()
+      api.ellipse() 
+    end
   },
   coordinate = {
     description = 'CoordSystem',
     buttons = { 'c' },
     modes = { 'shape' },
-    call = api.coordinate,
+    call = function() 
+      api.pen()
+      api.coordinate() 
+    end
   },
   spline = {
     description = 'Spline',
     buttons = { 'b' },
     modes = { 'shape' },
     call = api.spline,
+    call = function() 
+      api.pen()
+      api.spline() 
+    end
   },
   fillOn = {
     description = 'FillOn',
