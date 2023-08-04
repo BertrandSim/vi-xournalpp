@@ -313,31 +313,31 @@ keybindings = {
     description = "Ruler",
     buttons     = {"s"},
     modes       = {"shape"},
-    call        = clickRuler
+    call        = function() clickPen() ; clickRuler() end
   },
   arrow = {
     description = "Arrow",
     buttons     = {"a"},
     modes       = {"shape"},
-    call        = clickArrow
+    call        = function() clickPen() ; clickArrow() end
   },
   rectangle = {
     description = "Rectangle",
     buttons     = {"r", "c"},
     modes       = {"shape"},
-    call        = clickRectangle
+    call        = function() clickPen() ; clickRectangle() end
   },
   ellipse = {
     description = "Ellipse",
     buttons     = {"e"},
     modes       = {"shape"},
-    call        = clickEllipse
+    call        = function() clickPen() ; clickEllipse() end
   },
   spline = {
     description = "Spline",
     buttons     = {"b"},
     modes       = {"shape"},
-    call        = clickSpline
+    call        = function() clickPen() ; clickSpline() end
   },
   fill = {
     description = "Fill",
