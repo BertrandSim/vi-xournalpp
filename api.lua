@@ -71,11 +71,7 @@ function clickRectangle(enabled)
 end
 
 function clickSpline(enabled)
-    app.uiAction({["action"] = "ACTION_TOOL_DRAW_SPLINE", ["enabled"] = enabled})
-end
-
-function clickPlain()
-  app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_PLAIN"})
+  app.uiAction({["action"] = "ACTION_TOOL_DRAW_SPLINE", ["enabled"] = enabled})
 end
 
 function clickFill(enabled)
@@ -84,6 +80,10 @@ end
 
 
 -- linestyle
+function clickPlain()
+  app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_PLAIN"})
+end
+
 function clickDotted()
   app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DOT"})
 end
