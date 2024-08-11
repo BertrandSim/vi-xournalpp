@@ -9,7 +9,8 @@ ALL_MODES = {
   "page",
   "file",
   "navigation",
-  "visual"
+  "visual",
+  "resize"
 }
 --------------------
 -- KEYBINDINGS:   -- 
@@ -30,7 +31,7 @@ keybindings = {
   },
   highlighter = {
     description = "Highlighter",
-    buttons     = {"f"},
+    buttons     = {"y"},
     modes       = {"tool"},
     call        = function() clickHighlighter() ; cleanShape() end
   },
@@ -154,7 +155,7 @@ keybindings = {
   },
   file = {
     description = "File mode",
-    buttons     = {"y"},
+    buttons     = {"l"},
     modes       = {"tool"},
     call        = function() currentMode = "file" end
   },
@@ -181,6 +182,12 @@ keybindings = {
       currentMode = "visual" 
       sticky = true
     end
+  },
+  resize = {
+    description = "Resize mode",
+    buttons     = {"f"},
+    modes       = {"tool"},
+    call        = function() currentMode = "resize" end
   },
 
   -- Various tool mode commands
@@ -218,32 +225,32 @@ keybindings = {
   -- Thickness
   veryFine = {
     description = "Very Fine",
-    buttons     = {"1"},
-    modes       = {"tool"},
+    buttons     = {"a"},
+    modes       = {"resize"},
     call        = clickVeryFine,
   },
   fine = {
     description = "Fine",
-    buttons     = {"2"},
-    modes       = {"tool"},
+    buttons     = {"s"},
+    modes       = {"resize"},
     call        = clickFine,
   },
   medium = {
     description = "Medium",
-    buttons     = {"3"},
-    modes       = {"tool"},
+    buttons     = {"d"},
+    modes       = {"resize"},
     call        = clickMedium,
   },
   thick = {
     description = "Thick",
-    buttons     = {"4"},
-    modes       = {"tool"},
+    buttons     = {"f"},
+    modes       = {"resize"},
     call        = clickThick,
   },
   veryThick = {
     description = "Very thick",
-    buttons     = {"5"},
-    modes       = {"tool"},
+    buttons     = {"g"},
+    modes       = {"resize"},
     call        = clickVeryThick,
   },
   -- Colors
