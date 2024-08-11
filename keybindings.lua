@@ -45,7 +45,7 @@ local keybindings = {
   },
   highlighter = {
     description = 'Highlighter',
-    buttons = { 'f' },
+    buttons = { 'y' },
     modes = { 'tool' },
     call = api.highlighter,
   },
@@ -185,7 +185,7 @@ local keybindings = {
   },
   file = {
     description = 'File mode',
-    buttons = { 'y' },
+    buttons = { 'l' },
     modes = { 'tool' },
     call = function()
       changeMode('file')
@@ -222,6 +222,12 @@ local keybindings = {
     call = function()
       changeMode('resize')
     end,
+  },
+  resize = {
+    description = "Resize mode",
+    buttons     = {"f"},
+    modes       = {"tool"},
+    call        = function() currentMode = "resize" end
   },
 
   -- Various tool mode commands
