@@ -418,6 +418,12 @@ local keybindings = {
     modes = { 'shape' },
     call = api.fill,
   },
+  fillOff = {
+    description = "FillOff",
+    buttons     = {"<Shift>f"},
+    modes       = {"shape"},
+    call        = function() clickFill(false) end
+  },
   -- Linestyles
   plain = {
     description = 'Plain',
