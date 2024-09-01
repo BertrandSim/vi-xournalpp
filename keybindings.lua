@@ -358,6 +358,12 @@ keybindings = {
     modes       = {"shape"},
     call        = clickFill
   },
+  fillOff = {
+    description = "FillOff",
+    buttons     = {"<Shift>f"},
+    modes       = {"shape"},
+    call        = function() clickFill(false) end
+  },
   -- Linestyles
   plain = {
     description = "Plain",
