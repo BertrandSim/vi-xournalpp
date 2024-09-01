@@ -390,7 +390,7 @@ local keybindings = {
   },
   rectangle = {
     description = 'Rectangle',
-    buttons = { 'r', 'c' },
+    buttons = { 'r' },
     modes = { 'shape' },
     call = api.rectangle,
   },
@@ -399,6 +399,12 @@ local keybindings = {
     buttons = { 'e' },
     modes = { 'shape' },
     call = api.ellipse,
+  },
+  coordinate = {
+    description = 'CoordSystem',
+    buttons = { 'c' },
+    modes = { 'shape' },
+    call = api.coordinate,
   },
   spline = {
     description = 'Spline',
@@ -688,6 +694,7 @@ local function cleanShape()
   api.arrow(false)
   api.rectangle(false)
   api.ellipse(false)
+  api.coordinate(false)
   api.spline(false)
   api.fill(false)
 end
