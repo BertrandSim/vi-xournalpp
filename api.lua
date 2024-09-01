@@ -70,6 +70,10 @@ function clickRectangle(enabled)
   app.uiAction({["action"] = "ACTION_TOOL_DRAW_RECT", ["enabled"] = enabled})
 end
 
+function clickCoordSystem(enabled)
+  app.uiAction({["action"] = "ACTION_TOOL_DRAW_COORDINATE_SYSTEM", ["enabled"] = enabled})
+end
+
 function clickSpline(enabled)
   app.uiAction({["action"] = "ACTION_TOOL_DRAW_SPLINE", ["enabled"] = enabled})
 end

@@ -330,7 +330,7 @@ keybindings = {
   },
   rectangle = {
     description = "Rectangle",
-    buttons     = {"r", "c"},
+    buttons     = {"r"},
     modes       = {"shape"},
     call        = function() clickPen() ; clickRectangle() end
   },
@@ -339,6 +339,12 @@ keybindings = {
     buttons     = {"e"},
     modes       = {"shape"},
     call        = function() clickPen() ; clickEllipse() end
+  },
+  coordsystem = {
+    description = "CoordSystem",
+    buttons     = {"c"},
+    modes       = {"shape"},
+    call        = function() clickPen() ; clickCoordSystem() end
   },
   spline = {
     description = "Spline",
@@ -616,6 +622,7 @@ function cleanShape()
   clickArrow(false)
   clickRectangle(false)
   clickEllipse(false)
+  clickCoordSystem(false)
   clickSpline(false)
   clickFill(false)
   clickPlain()
