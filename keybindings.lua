@@ -679,17 +679,17 @@ local keybindings = {
 
   -- Snapping
   GridSnap = {
-   description = "Grid Snapping",
-   buttons     = {"g"},
-   modes       = {"visual", "shape"},
-   call        = clickGridSnap
+    description = "Grid Snapping",
+    buttons     = {"g"},
+    modes       = {"visual", "shape"},
+    call        = clickGridSnap
   },
 
   RotationSnap = {
-   description = "Rotation Snapping",
-   buttons     = {"h"},
-   modes       = {"visual", "shape"},
-   call        = clickRotationSnap
+    description = "Rotation Snapping",
+    buttons     = {"h"},
+    modes       = {"visual", "shape"},
+    call        = clickRotationSnap
   },
 
 }
