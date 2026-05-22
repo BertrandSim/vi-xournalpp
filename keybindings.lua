@@ -703,7 +703,7 @@ local keybindings = {
   },
 
   -- Snapping
-  gridSnap = {
+  gridSnapOn = {
     description = "Grid Snapping",
     buttons = { 'g' },
     modes = { 'visual', 'shape' },
@@ -711,13 +711,29 @@ local keybindings = {
       api.gridSnap(true)
     end,
   },
+  gridSnapOff = {
+    description = "Grid Snapping",
+    buttons = { '<Shift>g' },
+    modes = { 'visual', 'shape' },
+    call = function()
+      api.gridSnap(false)
+    end,
+  },
 
-  rotationSnap = {
+  rotationSnapOn = {
     description = 'Rotation Snapping',
     buttons = { 'v' },
     modes = { 'visual', 'shape' },
     call = function()
       api.rotationSnap(true)
+    end,
+  },
+  rotationSnapOff = {
+    description = 'Rotation Snapping',
+    buttons = { '<Shift>v' },
+    modes = { 'visual', 'shape' },
+    call = function()
+      api.rotationSnap(false)
     end,
   },
 
