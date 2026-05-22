@@ -175,6 +175,17 @@ wrapper.zoomOut = function()
   app.activateAction('zoom-out')
 end
 
+wrapper.zoomFit = function()
+  app.activateAction('zoom-fit')
+end
+
+wrapper.zoom100 = function()
+  app.activateAction('zoom-100')
+end
+
+-- Note: there is also 'zoom', 
+-- perhaps to set it to a specific value?
+
 -- PAGE MANAGEMENT
 wrapper.newBefore = function()
   app.activateAction('new-page-before')

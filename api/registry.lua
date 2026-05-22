@@ -240,6 +240,14 @@ return {
     { impl = wrapper.zoomOut, deps = { 'activateAction' } },
     { impl = legacy.zoomOut, deps = { 'uiAction' } },
   },
+  zoomFit = {
+    { impl = wrapper.zoomFit, deps = { 'activateAction' } },
+    { impl = legacy.zoomFit, deps = { 'uiAction' } },
+  },
+  zoom100 = {
+    { impl = wrapper.zoom100, deps = { 'activateAction' } },
+    { impl = legacy.zoom100, deps = { 'uiAction' } },
+  },
 
   -- PAGE MANAGEMENT
   newBefore = {

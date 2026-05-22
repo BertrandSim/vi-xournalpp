@@ -186,6 +186,14 @@ legacy.zoomOut = function()
   app.uiAction({ action = 'ACTION_ZOOM_OUT' })
 end
 
+legacy.zoomFit = function()
+  app.uiAction({ action = 'ACTION_ZOOM_FIT' })
+end
+
+legacy.zoom100 = function()
+  app.uiAction({ action = 'ACTION_ZOOM_100' })
+end
+
 -- PAGE MANAGEMENT
 legacy.newBefore = function()
   app.sidebarAction('NEW_BEFORE')
