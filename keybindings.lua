@@ -217,17 +217,11 @@ local keybindings = {
   },
   resize = {
     description = 'Resize mode',
-    buttons = { '<Shift>F' },
+    buttons = { 'f' },
     modes = { 'tool' },
     call = function()
       changeMode('resize')
     end,
-  },
-  resize = {
-    description = "Resize mode",
-    buttons     = {"f"},
-    modes       = {"tool"},
-    call        = function() currentMode = "resize" end
   },
 
   -- Various tool mode commands
