@@ -35,7 +35,10 @@ local keybindings = {
     description = 'Pen',
     buttons = { 'w' },
     modes = { 'tool' },
-    call = api.pen,
+    call = function()
+      api.pen()
+      cleanShape()
+    end,
   },
   eraser = {
     description = 'Eraser',
@@ -702,7 +705,7 @@ local keybindings = {
 }
 
 -- helper functions
-local function cleanShape()
+function cleanShape()
   api.ruler(false)
   api.arrow(false)
   api.rectangle(false)
