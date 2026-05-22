@@ -296,6 +296,15 @@ wrapper.isometricDottedGraphBG = function()
   app.changeCurrentPageBackground('isodotted')
 end
 
+-- SNAPPING
+wrapper.gridSnap = function(enabled)
+  toggleOrSet('grid-snapping', enabled)
+end
+
+wrapper.rotationSnap = function(enabled)
+  toggleOrSet('rotation-snapping', enabled)
+end
+
 -- FILES
 wrapper.open = function()
   app.activateAction('open')

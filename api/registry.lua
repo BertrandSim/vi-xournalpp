@@ -344,9 +344,11 @@ return {
 
   -- SNAPPING
   gridSnap = {
+    { impl = wrapper.gridSnap, deps = { 'changeActionState' } },
     { impl = legacy.gridSnap, deps = { 'uiAction' } },
   },
   rotationSnap = {
+    { impl = wrapper.rotationSnap, deps = { 'changeActionState' } },
     { impl = legacy.rotationSnap, deps = { 'uiAction' } },
   },
 
