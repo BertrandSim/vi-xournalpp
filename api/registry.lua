@@ -342,6 +342,14 @@ return {
     { impl = wrapper.isometricDottedGraphBG, deps = { 'changeCurrentPageBackground' } },
   },
 
+  -- SNAPPING
+  gridSnap = {
+    { impl = legacy.gridSnap, deps = { 'uiAction' } },
+  },
+  rotationSnap = {
+    { impl = legacy.rotationSnap, deps = { 'uiAction' } },
+  },
+
   -- FILES
   open = {
     { impl = wrapper.open, deps = { 'activateAction' } },

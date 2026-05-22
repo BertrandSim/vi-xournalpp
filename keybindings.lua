@@ -422,7 +422,7 @@ local keybindings = {
   },
   fillOff = {
     description = 'FillOff',
-    buttons = { '<Shift>f', 'v' },
+    buttons = { '<Shift>f' },
     modes = { 'shape' },
     call = function()
       api.fill(false)
@@ -680,20 +680,23 @@ local keybindings = {
     call = api.selectObject,
   },
 
-
   -- Snapping
-  GridSnap = {
+  gridSnap = {
     description = "Grid Snapping",
-    buttons     = {"g"},
-    modes       = {"visual", "shape"},
-    call        = clickGridSnap
+    buttons = { 'g' },
+    modes = { 'visual', 'shape' },
+    call = function()
+      api.gridSnap(true)
+    end,
   },
 
-  RotationSnap = {
-    description = "Rotation Snapping",
-    buttons     = {"h"},
-    modes       = {"visual", "shape"},
-    call        = clickRotationSnap
+  rotationSnap = {
+    description = 'Rotation Snapping',
+    buttons = { 'v' },
+    modes = { 'visual', 'shape' },
+    call = function()
+      api.rotationSnap(true)
+    end,
   },
 
 }

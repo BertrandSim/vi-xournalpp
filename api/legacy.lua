@@ -236,6 +236,24 @@ legacy.layerUp = function()
   app.uiAction({ action = 'ACTION_GOTO_NEXT_LAYER' })
 end
 
+-- SNAPPING
+-- NOTE: toggles only, does not enable/disable
+legacy.gridSnap = function(enabled)
+  app.uiAction({ 
+    action = 'ACTION_GRID_SNAPPING', 
+    group = 'GROUP_GRID_SNAPPING',
+    enabled = enabled,
+  })
+end
+
+legacy.rotationSnap = function(enabled)
+  app.uiAction({ 
+    action = 'ACTION_ROTATION_SNAPPING', 
+    group = 'GROUP_SNAPPING', 
+    enabled = enabled,
+  })
+end
+
 -- FILES
 legacy.open = function()
   app.uiAction({ action = 'ACTION_OPEN' })
