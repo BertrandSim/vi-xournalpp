@@ -8,6 +8,7 @@ local ALL_MODES = {
   'shape',
   'linestyle',
   'page',
+  'background',
   'file',
   'navigation',
   'visual',
