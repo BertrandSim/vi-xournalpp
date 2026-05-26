@@ -341,6 +341,15 @@ return {
   isometricDottedGraphBG = {
     { impl = wrapper.isometricDottedGraphBG, deps = { 'changeCurrentPageBackground' } },
   },
+  setPdfPageNr = {
+    { impl = wrapper.setPdfPageNr, deps = { 'getDocumentStructure', 'changeBackgroundPdfPageNr', 'refreshPage' } },
+  },
+  increasePdfPageNr = {
+    { impl = wrapper.increasePdfPageNr, deps = { 'changeBackgroundPdfPageNr', 'refreshPage' } },
+  },
+  decreasePdfPageNr = {
+    { impl = wrapper.decreasePdfPageNr, deps = { 'changeBackgroundPdfPageNr', 'refreshPage' } },
+  },
 
   -- SNAPPING
   gridSnap = {

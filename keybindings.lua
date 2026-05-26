@@ -601,6 +601,23 @@ local keybindings = {
     modes = { 'background' },
     call = api.graphBG,
   },
+  setPdfPageNr = {
+    description = 'Set a PDF page as background',
+    buttons = { 'p' },
+    modes = { 'background' },
+    call = api.setPdfPageNr,
+  },
+  increasePdfPageNr = {
+    description = 'Use next PDF page as background',
+    buttons = { 'plus' },
+    modes = { 'background' },
+    call = api.increasePdfPageNr,
+  },
+  decreasePdfPageNr = {
+    description = 'Use previous PDF page as background',
+    buttons = { 'minus' },
+    modes = { 'background' },
+    call = api.decreasePdfPageNr,
   },
 
   -- Navigation

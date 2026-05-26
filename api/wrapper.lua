@@ -296,6 +296,48 @@ wrapper.isometricDottedGraphBG = function()
   app.changeCurrentPageBackground('isodotted')
 end
 
+local function getPrevPagePdfPageNr()
+  local doc = app.getDocumentStructure()
+  local curPage = doc.currentPage
+  for i = curPage, 1, -1 do
+    local p = doc.pages[i]
+    if p.pdfBackgroundPageNo and p.pdfBackgroundPageNo > 0 then
+      return p.pdfBackgroundPageNo
+    end
+  end
+end
+
+local function getNextPagePdfPageNr()
+  local doc = app.getDocumentStructure()
+  local curPage = doc.currentPage
+  for i = curPage, #doc.pages do
+    local p = doc.pages[i]
+    if p.pdfBackgroundPageNo and p.pdfBackgroundPageNo > 0 then
+      return p.pdfBackgroundPageNo
+    end
+  end
+end
+
+wrapper.setPdfPageNr = function(pageNr)
+  if pageNr == nil then 
+    pageNr = getPrevPagePdfPageNr()
+  end
+  app.changeBackgroundPdfPageNr(pageNr, false)
+  app.refreshPage()
+end
+
+wrapper.increasePdfPageNr = function(amount)
+  if amount == nil then amount = 1 end
+  app.changeBackgroundPdfPageNr(1, true)
+  app.refreshPage()
+end
+
+wrapper.decreasePdfPageNr = function(amount)
+  if amount == nil then amount = 1 end
+  app.changeBackgroundPdfPageNr(-amount, true)
+  app.refreshPage()
+end
+
 -- SNAPPING
 wrapper.gridSnap = function(enabled)
   toggleOrSet('grid-snapping', enabled)
