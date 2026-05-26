@@ -156,7 +156,7 @@ local keybindings = {
   },
   page = {
     description = 'Page mode',
-    buttons = { 'b', 'p' },
+    buttons = { 'p' },
     modes = { 'tool' },
     call = function()
       changeMode('page')
@@ -164,10 +164,26 @@ local keybindings = {
   },
   stickyPage = {
     description = 'Sticky page mode',
-    buttons = { '<Shift>b', '<Shift>p' },
+    buttons = { '<Shift>p' },
     modes = { 'tool' },
     call = function()
       changeMode('page', true)
+    end,
+  },
+  background = {
+    description = 'Background mode',
+    buttons = { 'b' },
+    modes = { 'tool' },
+    call = function()
+      changeMode('background')
+    end,
+  },
+  stickyBackground = {
+    description = 'Sticky background mode',
+    buttons = { '<Shift>b' },
+    modes = { 'tool' },
+    call = function()
+      changeMode('background', true)
     end,
   },
   navigation = {
@@ -547,40 +563,42 @@ local keybindings = {
     modes = { 'page' },
     call = api.newLayer,
   },
+
+  -- Background
   ruledBG = {
     description = 'Ruled background',
     buttons = { 'f' },
-    modes = { 'page' },
+    modes = { 'background' },
     call = api.ruledBG,
   },
   graphBG = {
     description = 'Graph background',
     buttons = { 'g' },
-    modes = { 'page' },
+    modes = { 'background' },
     call = api.graphBG,
   },
   isoGraphBG = {
     description = 'Isometric graph background',
     buttons = { 'r' },
-    modes = { 'page' },
+    modes = { 'background' },
     call = api.isometricGraphBG,
   },
   dottedGraphBG = {
     description = 'Dotted background',
     buttons = { 'v' },
-    modes = { 'page' },
+    modes = { 'background' },
     call = api.dottedGraphBG,
   },
   isodottedGraphBG = {
     description = 'Isometric dotted background',
     buttons = { 'b' },
-    modes = { 'page' },
+    modes = { 'background' },
     call = api.isometricDottedGraphBG,
   },
   plainBG = {
     description = 'Plain background',
     buttons = { 'n' },
-    modes = { 'page' },
+    modes = { 'background' },
     call = api.plainBG,
   },
 
