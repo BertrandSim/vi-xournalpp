@@ -565,11 +565,35 @@ local keybindings = {
   },
 
   -- Background
+  plainBG = {
+    description = 'Plain background',
+    buttons = { 'a' },
+    modes = { 'background' },
+    call = api.plainBG,
+  },
   ruledBG = {
     description = 'Ruled background',
-    buttons = { 'f' },
+    buttons = { 'r' },
     modes = { 'background' },
     call = api.ruledBG,
+  },
+  isodottedGraphBG = {
+    description = 'Isometric dotted background',
+    buttons = { 's' },
+    modes = { 'background' },
+    call = api.isometricDottedGraphBG,
+  },
+  dottedGraphBG = {
+    description = 'Dotted background',
+    buttons = { 'd' },
+    modes = { 'background' },
+    call = api.dottedGraphBG,
+  },
+  isoGraphBG = {
+    description = 'Isometric graph background',
+    buttons = { 'f' },
+    modes = { 'background' },
+    call = api.isometricGraphBG,
   },
   graphBG = {
     description = 'Graph background',
@@ -577,29 +601,6 @@ local keybindings = {
     modes = { 'background' },
     call = api.graphBG,
   },
-  isoGraphBG = {
-    description = 'Isometric graph background',
-    buttons = { 'r' },
-    modes = { 'background' },
-    call = api.isometricGraphBG,
-  },
-  dottedGraphBG = {
-    description = 'Dotted background',
-    buttons = { 'v' },
-    modes = { 'background' },
-    call = api.dottedGraphBG,
-  },
-  isodottedGraphBG = {
-    description = 'Isometric dotted background',
-    buttons = { 'b' },
-    modes = { 'background' },
-    call = api.isometricDottedGraphBG,
-  },
-  plainBG = {
-    description = 'Plain background',
-    buttons = { 'n' },
-    modes = { 'background' },
-    call = api.plainBG,
   },
 
   -- Navigation
